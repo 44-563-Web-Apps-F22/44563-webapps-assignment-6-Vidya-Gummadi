@@ -20,10 +20,10 @@
     wrong=0;
     function checkGuess(){
         console.log("Check the guess")
-        secret = document.getElementById("SecretMusician").value
-        guess = document.getElementById("GuessMusician").value
-       if(secret==guess){
-        correct=correct+1
+        s = document.getElementById("SecretMusician").value
+        g = document.getElementById("GuessMusician").value
+       if(s==g){
+        correct+=1
         alert("You got it right")
        }
        else{
