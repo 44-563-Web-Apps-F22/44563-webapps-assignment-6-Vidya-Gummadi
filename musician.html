@@ -18,21 +18,48 @@
 <script> 
     correct=0;
     wrong=0;
+    count=0;
     function checkGuess(){
         console.log("Check the guess")
         s = document.getElementById("SecretMusician").value
         g = document.getElementById("GuessMusician").value
        if(s==g){
+        count=0;
         correct+=1
         alert("You got it right")
        }
        else{
+        count=count+1;
         wrong+=1
         alert("Wrong Musician")
+
+        if(count>=3){
+        if(wrong>=3){
+        gameover()
+        }
+
+     }
+
+    function gameover(){
+        alert("Sorry,game over")
+    }
+
        }
         
         result.innerHTML="Correct guess: "+correct+"Wrong guess: "+wrong
     }
+    if(count>=3){
+        if(wrong>=3){
+        gameover()
+        }
+
+     }
+
+    function gameover(){
+        alert("Sorry,game over")
+    }
+
+    
     </script>
     <div style="padding: 50px 50px"><img src="Alderflies.PNG" id="bird" height="100px" width="100px" onclick="swapImage()"></div>
     <script>
